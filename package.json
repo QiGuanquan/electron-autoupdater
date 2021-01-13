@@ -1,0 +1,58 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": " electron-builder --dir ",
+    "dist": " electron-builder --win --x64",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "productName": "electron测试",
+    "appId": " lark-electron ",
+    "directories": {
+      "output": "build"
+    },
+    "mac": {
+      "category": " your.app.category.type "
+    },
+    "win": {
+      "icon": "./public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true,
+      "installerIcon": "./public/icon.ico",
+      "uninstallerIcon": "./public/icon.ico"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://10.11.24.129/update/win32"
+      }
+    ]
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.5"
+  }
+}
